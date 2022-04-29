@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----Custom Var---- */
+
+:root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+    --gap: 10px;
+    --white: white;
+    --NoDecoration: none;
+    --list-style: none;
+    --textBold: bold;
+    --margin-0-5: 5px;
+    --margin-0-15: 15px;
+    --justify-center: center;
+    --justify-between: space-between;
+    --align-items: center;
+    --radius: 50%;
+    --marginNone: 0;
+    --paddingNone: 0;
+    --midiumFont: 500;
+    --flex-column: column;
+    --displayNone: none
+}
+
+/* ----Utility Classes---- */
+.radius {
+    border-radius: var(--radius);
+}
+
+.hide {
+    display: var(--displayNone);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.flex {
+    display: flex;
+    /* align-items: center; */
+    gap: var(--gap);
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #00002d;
+    color: white;
+}
+
+form.input-wrap {
+    display: flex;
+    gap: 20px;
+    background: white;
+    height: 50px;
+    color: #00002d;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 3px;
+    width: 630px;
+    margin: 0 auto;
+}
+
+form.input-wrap input {
+    border: none;
+    flex: 1;
+    background: #00002d1f;
+    height: 70%;
+    outline: none;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+button.button,
+button.DeteleTask {
+    background: #00002d;
+    color: white;
+    padding: 6px 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.button:hover,
+button.DeteleTask:hover {
+    background: #000060;
+}
+
+.incomplete,
+.complete {
+    width: 300px;
+    background: white;
+    color: #00002d;
+    margin-top: 30px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.progration-wrap {
+    display: flex;
+    gap: 30px;
+}
+
+h2 {
+    margin: 15px 0 45px 0;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #00002d;
+    top: 45px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.checkWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.checkWrap::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #00002d;
+}
+
+.CompletedWrap {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 38px;
+}
